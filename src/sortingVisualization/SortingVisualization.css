@@ -1,0 +1,17 @@
+.sortingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: red;
+  padding-top: 25px;
+}
+.stripesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.guiContainer {
+  background-color: green;
+  height: 100px;
+}
