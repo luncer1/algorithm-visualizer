@@ -1,4 +1,6 @@
 .stripe {
-  background-color: blue;
   min-width: 30px;
+  font-size: 12px;
+  padding-top: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

@@ -9,8 +9,23 @@
   color: white;
 }
 
+.buttonDisabled {
+  display: flex;
+  min-width: 200px;
+  flex-grow: 1;
+  background-color: rgb(145, 143, 143);
+  cursor: pointer;
+  padding: 10px;
+  justify-content: center;
+  color: rgb(174, 174, 174);
+}
+
 .buttonContainer:hover {
   background-color: rgb(169, 206, 219);
   color: black;
   transition: 0.3s linear;
+}
+
+.buttonDisabled:hover {
+  color: rgb(174, 174, 174);
 }

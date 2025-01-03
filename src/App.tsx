@@ -7,6 +7,7 @@ const renderSwitch = (
   state: string,
   selectionVariable: React.Dispatch<React.SetStateAction<string>>
 ) => {
+  const STRIPE_AMT = 40
   switch (state) {
     case "main":
       return (
@@ -30,6 +31,7 @@ const renderSwitch = (
             name="Merge Sort"
             setVariable={selectionVariable}
             nameVariable="mergeSort"
+            disabled={true}
           />
           <ButtonMain
             name="Quicksort"
@@ -40,16 +42,19 @@ const renderSwitch = (
             name="Counting Sort"
             setVariable={selectionVariable}
             nameVariable="countingSort"
+            disabled={true}
           />
           <ButtonMain
             name="Radix Sort"
             setVariable={selectionVariable}
             nameVariable="radixSort"
+            disabled={true}
           />
           <ButtonMain
             name="Bucket Sort"
             setVariable={selectionVariable}
             nameVariable="bucketSort"
+            disabled={true}
           />
           <ButtonMain
             name="Heap Sort"
@@ -64,25 +69,95 @@ const renderSwitch = (
         </div>
       );
     case "bubbleSort":
-      return <SortingVisualization stripeAmount={30}/>;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Bubble Sort"
+          state={state}
+        />
+      );
     case "selectionSort":
-      return <div className="selectionSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Selection Sort"
+          state={state}
+        />
+      );
     case "insertionSort":
-      return <div className="insertionSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Insertion Sort"
+          state={state}
+        />
+      );
     case "mergeSort":
-      return <div className="mergeSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Merge Sort"
+          state={state}
+        />
+      );
     case "quickSort":
-      return <div className="quickSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Quick Sort"
+          state={state}
+        />
+      );
     case "countingSort":
-      return <div className="countingSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Counting Sort"
+          state={state}
+        />
+      );
     case "radixSort":
-      return <div className="radixSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Radix Sort"
+          state={state}
+        />
+      );
     case "bucketSort":
-      return <div className="bucketSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Bucket Sort"
+          state={state}
+        />
+      );
     case "heapSort":
-      return <div className="heapSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Heap Sort"
+          state={state}
+        />
+      );
     case "shellSort":
-      return <div className="shellSortContainer" />;
+      return (
+        <SortingVisualization
+          stripeAmount={STRIPE_AMT}
+          setVariable={selectionVariable}
+          algoName="Shell Sort"
+          state={state}
+        />
+      );
     default:
       return <div />;
   }
