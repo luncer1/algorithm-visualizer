@@ -60,11 +60,13 @@ const renderSwitch = (
             name="Heap Sort"
             setVariable={selectionVariable}
             nameVariable="heapSort"
+            disabled={true}
           />
           <ButtonMain
             name="Shell Sort"
             setVariable={selectionVariable}
             nameVariable="shellSort"
+            disabled={true}
           />
         </div>
       );
